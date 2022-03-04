@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN CGO_ENABLED=0 go build -a -ldflags '-extldflags "-static"'
-
+# test change
 FROM scratch
 COPY --from=build-env /usr/src/app/sampleapp /sampleapp
 COPY --from=build-env /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
