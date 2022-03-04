@@ -17,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       changed: ${{ steps.filter.outputs.changed }}
+      dockerfile: ${{ steps.filter.outputs.dockerfile }}
     steps:
       - uses: actions/checkout@v2
       - uses: dorny/paths-filter@v2
